@@ -1,10 +1,30 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import LoggingPage from './components/LoggingPage';
-import GuestPage from './components/GuestPage';
-import AdminPage from './components/AdminPage';
-import './styles.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import LoginPage from "./pages/LoginPage";
+import GuestPage from "./pages/GuestPage";
+import AdminPage from "./pages/AdminPage";
+import HomePage from "./pages/HomePage";
+import ContactPage from "./pages/ContactPage";
+import SiteMapPage from "./pages/SiteMapPage";
+
+function App() {
+  return (
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/guest" element={<GuestPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/sitemap" element={<SiteMapPage />} />
+      </Routes>
+    </div>
+  );
+}
+
+
 
 const App = () => {
   return (
@@ -27,6 +47,58 @@ const App = () => {
   );
 };
 
+
+
+
+import React, { useState } from 'react';
+
+function App() {
+  const [inputValue, setInputValue] = useState(""); // State to manage input value
+
+  // Handle change function
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  return (
+    <div>
+      <h1>React Form Example</h1>
+     
+      <form>
+        {/* Label and Input */}
+        <div>
+          <label htmlFor="username">Username:</label> {/* Linking label to input */}
+          <input
+            type="text"
+            id="username" // Same as htmlFor in label
+            name="username"
+            value={inputValue} // Binding state to input field
+            onChange={handleChange} // Update state on input change
+          />
+        </div>
+
+        {/* Another Label and Input */}
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            onChange={handleChange}
+          />
+        </div>
+
+        {/* Submit Button */}
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  );
+}
+
 export default App;
+
+
 
 
