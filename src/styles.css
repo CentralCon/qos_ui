@@ -1,0 +1,33 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  nav a {
+    margin-right: 10px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .logging-page, .guest-page, .admin-page {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+  }
+  
+  
+  
