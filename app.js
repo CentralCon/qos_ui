@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LoggingPage from './components/LoggingPage';
 import GuestPage from './components/GuestPage';
 import AdminPage from './components/AdminPage';
+import './styles.css';
 
 const App = () => {
   return (
