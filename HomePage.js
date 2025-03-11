@@ -1,15 +1,12 @@
-import React from "react";
+import React from 'react';
 
-function HomePage() {
+const HomePage = () => {
   return (
     <div>
-      <h2>Welcome to Central Connect</h2>
-      <p>Your hub for all things connected.</p>
+      <h1>Welcome to Central Connect</h1>
+     <p>Your hub for all things connected.</p>
     </div>
   );
-}
-
-export default HomePage;
-
+};
 
 
