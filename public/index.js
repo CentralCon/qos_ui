@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './styles.css'; // Importing styles if you have a CSS file
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root') // This targets the root element in index.html
+  <Router>
+    <Switch>
+      <Route path="/" exact component={HomePage} />
+      <Route path="/login" component={LoginPage} />
+    </Switch>
+  </Router>,
+  document.getElementById('root')
 );
 
 
