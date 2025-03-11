@@ -24,7 +24,6 @@ function App() {
   );
 }
 
-export default App;
 
 
 
@@ -49,7 +48,6 @@ const App = () => {
   );
 };
 
-export default App;
 
 
 import React, { useState } from 'react';
